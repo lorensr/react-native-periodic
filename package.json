@@ -1,0 +1,16 @@
+{
+  "name": "periodic",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "storybook": "storybook start -p 7007"
+  },
+  "dependencies": {
+    "react": "15.3.1",
+    "react-native": "0.32.0"
+  },
+  "devDependencies": {
+    "@kadira/react-native-storybook": "^2.0.0"
+  }
+}

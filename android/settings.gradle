@@ -1,0 +1,3 @@
+rootProject.name = 'periodic'
+
+include ':app'
