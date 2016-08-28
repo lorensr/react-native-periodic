@@ -2,26 +2,32 @@ import React from 'react';
 import { Text } from 'react-native';
 import { storiesOf, action, linkTo } from '@kadira/react-native-storybook';
 
-import Button from './Button';
-import CenterView from './CenterView';
-import Welcome from './Welcome';
+import PeriodicShell from '../../index.ios.js'
+import CenterView from './CenterView'
 
-storiesOf('Welcome', module)
-  .add('to Storybook', () => (
-    <Welcome showApp={linkTo('Button')}/>
-  ));
-
-storiesOf('Button', module)
+storiesOf('Periodic', module)
   .addDecorator(getStory => (
     <CenterView>{getStory()}</CenterView>
   ))
-  .add('with text', () => (
-    <Button onPress={action('clicked-text')}>
-      <Text>Hello Button</Text>
-    </Button>
+  .add('default', () => (
+    <PeriodicShell />
   ))
-  .add('with some emojies', () => (
-    <Button onPress={action('clicked-emoji')}>
-      <Text>😀 😎 👍 💯</Text>
-    </Button>
-  ));
+  .add('with initialState', () => (
+    <PeriodicShell
+      initialState={{
+        period: 'Weekly',
+        date: new Date(Date.now() + 1000 * 60 * 60),
+        weekdays: ['Monday', 'Wednesday'],
+        dayOfMonth: "19",
+      }}
+      />
+  ))
+  .add('customized segmented control', () => (
+    <PeriodicShell
+      segmentedControl={{
+        tint: 'white',
+        backTint: 'gray',
+      }}
+      />
+
+  ))

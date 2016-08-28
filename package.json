@@ -1,16 +1,47 @@
 {
-  "name": "periodic",
+  "name": "react-native-periodic",
   "version": "0.0.1",
-  "private": true,
+  "description": "🕐🕑🕒📆 Form inputs for periodic or recurring times – daily, weekly, or monthly at a chosen time",
+  "homepage": "https://github.com/lorensr/react-native-periodic",
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "storybook": "storybook start -p 7007"
+    "storybook": "storybook start -p 7007",
+    "postversion": "git push && git push --follow-tags"
+  },
+  "bugs": {
+    "url": "https://github.com/lorensr/react-native-periodic/issues"
+  },
+  "license": "MIT",
+  "main": "Periodic.js",
+  "files": "Periodic.js",
+  "keywords": [
+    "react-native",
+    "react-native-component",
+    "react native",
+    "react-component",
+    "forms",
+    "inputs",
+    "dates"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lorensr/react-native-periodic.git"
   },
   "dependencies": {
+    "react-native-multiple-choice": "0.0.8",
+    "react-native-radio-buttons": "^0.12.1"
+  },
+  "devDependencies": {
+    "react": "15.3.1",
+    "react-native": "0.32.0",
+    "@kadira/react-native-storybook": "^2.0.0"
+  },
+  "peerDependencies": {
     "react": "15.3.1",
     "react-native": "0.32.0"
   },
-  "devDependencies": {
-    "@kadira/react-native-storybook": "^2.0.0"
+  "author": {
+    "name": "Loren Sands-Ramshaw",
+    "url": "http://lorensr.me"
   }
 }

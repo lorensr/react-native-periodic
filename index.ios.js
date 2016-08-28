@@ -9,44 +9,53 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  ScrollView,
+  TouchableHighlight,
 } from 'react-native';
 
-class periodic extends Component {
+import Periodic from './Periodic'
+
+export default class periodic extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {}
+  }
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
+      <ScrollView contentContainerStyle={styles.container}>
+        <TouchableHighlight
+          style={{ marginBottom: 50 }}
+          onPress={() => this.setState({ periodic: this.refs.periodic.state })}>
+          <Text
+            style={{
+              color: 'green'
+            }}>
+            print state
+          </Text>
+        </TouchableHighlight>
+        <Text
+          style={{ marginBottom: 50}}>
+          {
+            JSON.stringify(this.state.periodic, null, 2)
+          }
         </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+        <Periodic
+          ref="periodic"
+          {...this.props}
+          />
+      </ScrollView>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+    paddingTop: 100,
   },
 });
 
