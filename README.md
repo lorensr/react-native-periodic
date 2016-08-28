@@ -1,4 +1,19 @@
+[![npm version](https://badge.fury.io/js/react-native-periodic.svg)](https://badge.fury.io/js/react-native-periodic)
+
 `<Periodic>` – 🕐🕑🕒📆 Form inputs for periodic or recurring times – daily, weekly, or monthly at a chosen time
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [UI](#ui)
+  - [Demo](#demo)
+  - [Daily](#daily)
+  - [Weekly](#weekly)
+  - [Monthly](#monthly)
+- [Usage](#usage)
+- [Credits](#credits)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## UI
 
@@ -19,6 +34,8 @@ react-native run-ios
 ```
 
 Select an example in the browser and see the demo in the simulator. You may need to refresh to get them started.
+
+Here are some screenshots from the demo:
 
 ### Daily
 
@@ -56,7 +73,7 @@ Only the time part of `state.date` is used. If `state.period` is `'Daily'`, only
 
 Props are optional:
 
-```
+```js
 segmentedControl: PropTypes.object,
 initialState: PropTypes.shape({
   period: PropTypes.string,
