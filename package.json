@@ -1,6 +1,6 @@
 {
   "name": "react-native-periodic",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "🕐🕑🕒📆 Form inputs for periodic or recurring times – daily, weekly, or monthly at a chosen time",
   "homepage": "https://github.com/lorensr/react-native-periodic",
   "scripts": {
@@ -13,7 +13,6 @@
   },
   "license": "MIT",
   "main": "Periodic.js",
-  "files": "Periodic.js",
   "keywords": [
     "react-native",
     "react-native-component",
